@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Financial Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color: #fff;
+            color: #000;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            margin-bottom: 2em;
+        }
+        .chart {
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Financial Report</h1>
+    <h2>Auto Insights</h2>
+    <ul>
+        {% for insight in insights %}
+            <li>{{ insight }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Visual Charts</h2>
+    {% for chart in charts.values() %}
+        <div class="chart">
+            {{ chart|safe }}
+        </div>
+    {% endfor %}
+</body>
+</html>

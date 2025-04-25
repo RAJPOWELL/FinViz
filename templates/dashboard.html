@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="dashboard">
+    <h2>Financial Dashboard</h2>
+
+    <div class="insights">
+        <h3>Auto Insights</h3>
+        <ul>
+            {% for insight in insights %}
+                <li>{{ insight }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/download/{{ file_id }}" class="download-btn">Download PDF Report</a>
+    </div>
+
+    <div class="charts">
+        {% for chart in charts.values() %}
+            <div class="chart-box">
+                {{ chart|safe }}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

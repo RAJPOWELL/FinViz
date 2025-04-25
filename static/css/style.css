@@ -1,0 +1,144 @@
+/* Base Styles */
+:root {
+    --primary-color: #4E79A7;
+    --secondary-color: #F28E2B;
+    --accent-color: #E15759;
+    --text-color: #e0e0e0;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
+    --positive-color: #4CAF50;
+    --negative-color: #F44336;
+}
+
+body.dark-theme {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('/static/img/011.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons .btn {
+    margin: 10px 0;
+    padding: 10px 25px;
+    font-weight: 500;
+    background-color: #4E79A7;
+}
+
+/* Features Section */
+.features-section {
+    margin-bottom: 50px;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px 0;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Dashboard Styles (keep existing) */
+.dashboard {
+    padding: 2em;
+}
+
+.chart-box {
+    margin-bottom: 2em;
+    background-color: var(--card-bg);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+.fin-yellow {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 29px;
+  }
+  
+  .viz-black {
+    color: white;
+    font-weight: bold;
+    font-size: 29px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg); 
+    color: var(--text-color);         
+    border-top: 1px solid var(--border-color); 
+    margin-top: auto;
+  }
+  
+
+
+  
+  

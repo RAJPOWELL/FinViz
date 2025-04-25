@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="display-4">Visualize Financial Data with <span class="highlight">AI Insights</span></h1>
+        <p class="lead">Transform complex financial data into intuitive, interactive visualizations for better decision-making.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="hero-buttons">
+            <input type="file" name="file" id="file" class="form-control" accept=".csv" required>
+            <button type="submit" class="btn btn-primary btn-lg">Get Started</button>
+        </form>
+    </div>
+</div>
+
+<div class="container features-section" id="features">
+    <div class="row">
+        <div class="col-md-4 feature-card">
+            <div class="feature-icon">
+                <i class="bi bi-graph-up"></i>
+            </div>
+            <h3>Interactive Charts</h3>
+            <p>Explore financial data with dynamic, interactive visualizations including revenue, expense, and profit charts.</p>
+        </div>
+        <div class="col-md-4 feature-card">
+            <div class="feature-icon">
+                <i class="bi bi-cpu"></i>
+            </div>
+            <h3>AI-Powered Analysis</h3>
+            <p>Our algorithms automatically detect patterns and generate key financial insights.</p>
+        </div>
+        <div class="col-md-4 feature-card">
+            <div class="feature-icon">
+                <i class="bi bi-database"></i>
+            </div>
+            <h3>Multiple Data Sources</h3>
+            <p>Connect to various data sources including CSV files with financial data.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
